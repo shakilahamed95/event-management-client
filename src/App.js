@@ -6,7 +6,7 @@ import Services from './Pages/Services/Services';
 
 function App() {
   return (
-    <div >
+    <div>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
