@@ -1,14 +1,13 @@
 import React from 'react';
 import Header from '../../Shared/Header';
-import Background from './Background';
 
-const Home = () => {
+const Services = () => {
     return (
         <div>
             <Header></Header>
-            <Background></Background>
+            <h1>Our serrvices</h1>
         </div>
     );
 };
 
-export default Home;
+export default Services;
