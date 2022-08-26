@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "img1": "./service/social-service-1.jpg",
+      "img2": "./service/social-service-2.jpg",
+      "img3": "./service/social-service-3.jpg",
+      "img4": "./service/social-service-4.jpg",
+      "title": "Social Events",
+      "date": "August 03 2019 , 03 AM - August 03 2019 , 11 PM",
+      "address": "32-B, Envato St, Themeforest Ave, CA",
+      "details1": "Consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqul enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "details2": "Excepteur sint occaecat cupidata non proident sunt in culpa qui officia deserunt mol lit anim id est laborum tempore laboris volputate.."
+    },
+    {
+      "id": 2,
+      "img1": "./service/dance-1.jpg",
+      "img2": "./service/dance-2.jpg",
+      "img3": "./service/dance-3.jpg",
+      "img4": "./service/dance-4.jpg",
+      "title": "Dance Event",
+      "date": "August 03 2019 , 03 AM - August 03 2019 , 11 PM",
+      "address": "32-B, Envato St, Themeforest Ave, CA",
+      "details1": "Consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqul enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "details2": "Excepteur sint occaecat cupidata non proident sunt in culpa qui officia deserunt mol lit anim id est laborum tempore laboris volputate.."
+    },
+    {
+      "id": 3,
+      "img1": "./service/Corporate-Seminar-1.jpg",
+      "img2": "./service/Corporate-Seminar-2.jpg",
+      "img3": "./service/Corporate-Seminar-3.jpg",
+      "img4": "./service/Corporate-Seminar-4.jpg",
+      "title": "Corporate Seminars",
+      "date": "August 03 2019 , 03 AM - August 03 2019 , 11 PM",
+      "address": "32-B, Envato St, Themeforest Ave, CA",
+      "details1": "Consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqul enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "details2": "Excepteur sint occaecat cupidata non proident sunt in culpa qui officia deserunt mol lit anim id est laborum tempore laboris volputate.."
+    },
+    {
+      "id": 4,
+      "img1": "./service/birthday-1.jpg",
+      "img2": "./service/birthday-2.jpg",
+      "img3": "./service/birthday-3.jpg",
+      "img4": "./service/birthday-4.jpg",
+      "title": "Birthday Parties",
+      "date": "August 03 2019 , 03 AM - August 03 2019 , 11 PM",
+      "address": "32-B, Envato St, Themeforest Ave, CA",
+      "details1": "Consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqul enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "details2": "Excepteur sint occaecat cupidata non proident sunt in culpa qui officia deserunt mol lit anim id est laborum tempore laboris volputate.."
+    },
+    {
+      "id": 5,
+      "img1": "./service/mehndi-1.jpg",
+      "img2": "./service/mehndi-2.jpg",
+      "img3": "./service/mehndi-3.jpg",
+      "img4": "./service/mehndi-1.jpg",
+      "title": "Mehndi events",
+      "date": "August 03 2019 , 03 AM - August 03 2019 , 11 PM",
+      "address": "32-B, Envato St, Themeforest Ave, CA",
+      "details1": "Consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqul enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "details2": "Excepteur sint occaecat cupidata non proident sunt in culpa qui officia deserunt mol lit anim id est laborum tempore laboris volputate.."
+    },
+    {
+      "id": 6,
+      "img1": "./service/mehndi-2.jpg",
+      "img2": "./service/mehndi-2.jpg",
+      "img3": "./service/mehndi-3.jpg",
+      "img4": "./service/mehndi-1.jpg",
+      "title": "Wedding Events",
+      "date": "August 03 2019 , 03 AM - August 03 2019 , 11 PM",
+      "address": "32-B, Envato St, Themeforest Ave, CA",
+      "details1": "Consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqul enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "details2": "Excepteur sint occaecat cupidata non proident sunt in culpa qui officia deserunt mol lit anim id est laborum tempore laboris volputate.."
+    }
+  ]
+  

@@ -4,7 +4,7 @@ const Specialist = ({specialist}) => {
     const {image, title, des} = specialist;
     return (
         <div>
-            <div className="card w-96 ">
+            <div className="card m-0 w-92 ">
   <div className="card-body">
   <div className="flex">
   <figure>{image}</figure>
