@@ -40,66 +40,83 @@ const Register = () => {
                     <div class="text-center lg:text-left">
                         <img src={registerImg} alt='Register' class="max-w-sm rounded-lg " />
                     </div>
-
-
                     <div class="card flex-shrink-0 w-full max-w-sm bg-base-100">
                         <div class="card-body">
                             <h2 className="text-center text-3xl font-bold text-blue-700">Please Register</h2>
-
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="form-control w-full max-w-xs my-3">
-                                    <label className="input-group">
+                                    {/* <label className="input-group">
                                         <span>Name</span>
-                                        <input type="text" placeholder="Your Name" className="input input-bordered w-full max-w-xs"
-                                            {...register("name", {
-                                                required: {
-                                                    value: true,
-                                                    message: 'Provide your name'
-                                                }
-                                            })} />
-                                    </label>
+                                        </label> */}
+                                    <input type="text" placeholder="Your Name" className="input input-bordered w-full max-w-xs"
+                                        {...register("name", {
+                                            required: {
+                                                value: true,
+                                                message: 'Provide your name'
+                                            }
+                                        })} />
                                     <label>
                                         {errors.name?.type === 'required' && <span className="label-text-alt text-red-700">{errors.name.message}</span>}
                                     </label>
                                 </div>
                                 <div className="form-control w-full max-w-xs my-3">
-                                    <label className="input-group">
+                                    {/* <label className="input-group">
                                         <span>Email</span>
-                                        <input type="email" placeholder="Email Address" className="input input-bordered w-full max-w-xs"
-                                            {...register("email", {
-                                                required: {
-                                                    value: true,
-                                                    message: 'Provide your email'
-                                                },
-                                                pattern: {
-                                                    value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                                    message: 'Provide a valid Email'
-                                                }
-                                            })} />
-                                    </label>
+                                    </label> */}
+                                    <input type="email" placeholder="Email Address" className="input input-bordered w-full max-w-xs"
+                                        {...register("email", {
+                                            required: {
+                                                value: true,
+                                                message: 'Provide your email'
+                                            },
+                                            pattern: {
+                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                                message: 'Provide a valid Email'
+                                            }
+                                        })} />
                                     <label>
                                         {errors.email?.type === 'required' && <span className="label-text-alt text-red-700">{errors.email.message}</span>}
                                         {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-700">{errors.email.message}</span>}
                                     </label>
                                 </div>
                                 <div className="form-control w-full max-w-xs my-3">
-                                    <label className="input-group">
+                                    {/* <label className="input-group">
                                         <span>Password</span>
-                                        <input type="password" placeholder="Password" className="input input-bordered w-full max-w-xs"
-                                            {...register("password", {
-                                                required: {
-                                                    value: true,
-                                                    message: 'Provide your password'
-                                                },
-                                                pattern: {
-                                                    value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,20}$/,
-                                                    message: 'Provide the 6 characters longer and Strong password'
-                                                }
-                                            })} />
-                                    </label>
+                                    </label> */}
+                                    <input type="password" placeholder="Password" className="input input-bordered w-full max-w-xs"
+                                        {...register("password", {
+                                            required: {
+                                                value: true,
+                                                message: 'Provide your password'
+                                            },
+                                            pattern: {
+                                                value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,20}$/,
+                                                message: 'Provide the 6 characters longer and Strong password'
+                                            }
+                                        })} />
                                     <label>
                                         {errors.password?.type === 'required' && <span className="label-text-alt text-red-700">{errors.password.message}</span>}
                                         {errors.password?.type === 'pattern' && <span className="label-text-alt text-red-700">{errors.password.message}</span>}
+                                    </label>
+                                </div>
+                                <div className="form-control w-full max-w-xs my-3">
+                                    {/* <label className="input-group">
+                                        <span>Password</span>
+                                    </label> */}
+                                    <input type="password" placeholder="Confirm Password" className="input input-bordered w-full max-w-xs"
+                                        {...register("confirmPassword", {
+                                            required: {
+                                                value: true,
+                                                message: 'Provide your confirm password'
+                                            },
+                                            pattern: {
+                                                value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,20}$/,
+                                                message: 'Provide the 6 characters longer and Strong password'
+                                            }
+                                        })} />
+                                    <label>
+                                        {errors.confirmPassword?.type === 'required' && <span className="label-text-alt text-red-700">{errors.confirmPassword.message}</span>}
+                                        {errors.confirmPassword?.type === 'pattern' && <span className="label-text-alt text-red-700">{errors.confirmPassword.message}</span>}
                                     </label>
                                 </div>
                                 <input className='btn btn-outline border-blue-600 w-full max-w-xs my-2' type="submit" value='Register' />
