@@ -18,7 +18,7 @@ const Register = () => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
         navigate(from, { replace: true })
-        
+
         const userData = {
             name: data.name,
             email: data.email,
@@ -53,8 +53,7 @@ const Register = () => {
     }
 
     return (
-        <div>
-            <h2 className="text-center text-2">Please Register</h2>
+        <div >
             <div class="hero">
                 <div class="hero-content flex-col lg:flex-row-reverse">
                     <div class="text-center lg:text-left">
@@ -64,8 +63,9 @@ const Register = () => {
 
                     <div class="card flex-shrink-0 w-full max-w-sm bg-base-100">
                         <div class="card-body">
+                            <h2 className="text-center text-3xl font-bold text-blue-700">Please Register</h2>
 
-                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="form-control w-full max-w-xs my-3">
                                     <label className="input-group">
                                         <span>Name</span>
@@ -121,13 +121,12 @@ const Register = () => {
                                         {errors.password?.type === 'pattern' && <span className="label-text-alt text-red-700">{errors.password.message}</span>}
                                     </label>
                                 </div>
-                                <input className='btn w-full max-w-xs text-white' type="submit" value='Register' />
+                                <input className='btn btn-outline border-blue-600 w-full max-w-xs my-2' type="submit" value='Register' />
                             </form>
 
-                        </div>
-
-                        <p className='text-center font-semibold'><small>If you have an account ? <Link className='text-blue-600' to='/login'>Please Login</Link> </small></p>
+                            <p className='text-center font-semibold'><small>If you have an account ? <Link className='text-blue-600' to='/login'>Please Login</Link> </small></p>
                             <SocialLogin />
+                        </div>
 
                     </div>
                 </div>
