@@ -19,32 +19,13 @@ const Register = () => {
         await updateProfile({ displayName: data.name });
         navigate(from, { replace: true })
 
-        const userData = {
-            name: data.name,
-            email: data.email,
-            password: data.password
+        if (user) {
+            Window.success('User create successfully')
+            reset();
         }
-
-        // User data send to database
-        fetch('http://localhost:5000/users', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(userData)
-        })
-            .then(res => res.json())
-            .then(inserted => {
-                if (inserted.insertedId) {
-                    // toast.success('User create successfully')
-                    Window.success('User create successfully')
-                    reset();
-                }
-                else {
-                    // toast.error('User create fail. Please try again')
-                    Window.error('User create fail. Please try again')
-                }
-            })
+        else {
+            Window.error('User create fail. Please try again')
+        }
     };
     console.log(user);
 
