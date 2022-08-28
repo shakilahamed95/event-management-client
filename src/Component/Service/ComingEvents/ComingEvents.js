@@ -6,7 +6,7 @@ import SingleEvent from './SingleEvent';
 const ComingEvents = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch('servicData.json')
+        fetch('serviceData.json')
         .then(res => res.json())
         .then(data => setData(data))
     }, [])
