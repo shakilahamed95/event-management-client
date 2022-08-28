@@ -4,6 +4,7 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
+import NotFound from './Pages/NotFound';
 import Services from './Pages/Services/Services';
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
 
         <Route path='/register' element={<Register />}></Route>
         <Route path='/login' element={<Login />}></Route>
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

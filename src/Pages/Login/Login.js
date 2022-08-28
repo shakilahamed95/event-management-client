@@ -2,7 +2,7 @@ import React from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import registerImg from './register.png'
+import loginImg from './login.png'
 import SocialLogin from './SocialLogin';
 import auth from '../../Firebase/firebase.init';
 
@@ -30,7 +30,7 @@ const Login = () => {
             <div class="hero">
                 <div class="hero-content flex-col lg:flex-row-reverse">
                     <div class="text-center lg:text-left">
-                        <img src={registerImg} alt='Register' class="max-w-sm " />
+                        <img src={loginImg} alt='Register' class="max-w-sm " />
                     </div>
                     <div class="card flex-shrink-0 w-full max-w-sm bg-base-100">
                         <div class="card-body">
