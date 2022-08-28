@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import auth from '../../Firebase/firebase.init';
-import registerImg from './register.png'
+import registerImg from '../../Images/register.png'
 import SocialLogin from './SocialLogin';
 
 const Register = () => {

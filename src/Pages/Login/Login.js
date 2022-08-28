@@ -2,7 +2,7 @@ import React from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import loginImg from './login.png'
+import loginImg from '../../Images/login.png'
 import SocialLogin from './SocialLogin';
 import auth from '../../Firebase/firebase.init';
 
