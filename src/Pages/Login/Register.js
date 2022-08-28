@@ -2,6 +2,7 @@ import React from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 import auth from '../../Firebase/firebase.init';
 import registerImg from './register.png'
 import SocialLogin from './SocialLogin';
@@ -15,19 +16,19 @@ const Register = () => {
     const from = location.state?.from?.pathname || "/";
 
     const onSubmit = async (data) => {
-        if(data.password !== data.confirmPassword){
-            return
-        }
         await createUserWithEmailAndPassword(data.email, data.password);
-        await updateProfile({ displayName: data.name });
-        navigate(from, { replace: true })
+            await updateProfile({ displayName: data.name });
+            navigate(from, { replace: true })
 
         if (user) {
-            Window.success('User create successfully')
-            reset();
+            /* swal("User create successfully", "You clicked the button!", "success");
+            reset(); */
+            swal("User create fail. Please try again", "You clicked the button!", "error");
         }
         else {
-            Window.error('User create fail. Please try again')
+            swal("User create successfully", "You clicked the button!", "success");
+            reset();
+            // swal("User create fail. Please try again", "You clicked the button!", "error");
         }
     };
     console.log(user);
@@ -86,31 +87,26 @@ const Register = () => {
                                                 value: true,
                                                 message: 'Provide your password'
                                             },
-                                            pattern: {
-                                                value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,20}$/,
-                                                message: 'Provide the 6 characters longer and Strong password'
+                                            minLength: {
+                                                value: 5,
+                                                message: 'Provide the 5 characters or longer password'
                                             }
                                         })} />
                                     <label>
                                         {errors.password?.type === 'required' && <span className="label-text-alt text-red-700">{errors.password.message}</span>}
-                                        {errors.password?.type === 'pattern' && <span className="label-text-alt text-red-700">{errors.password.message}</span>}
+                                        {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-700">{errors.password.message}</span>}
                                     </label>
                                 </div>
-                                {/* ------Confirm Password------ */}
+                                {/* ------Contact Number------ */}
                                 <div className="form-control w-full max-w-xs my-3">
-                                    <input type="password" placeholder="Confirm Password" className="input input-bordered w-full max-w-xs"
-                                        {...register("confirmPassword", {
-                                            required: {
-                                                value: true,
-                                                message: 'Provide your confirm password'
-                                            },
+                                    <input type="number" placeholder="Contact Number" className="input input-bordered w-full max-w-xs"
+                                        {...register("number", {
                                             pattern: {
-                                                value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,20}$/,
-                                                message: 'Provide the 6 characters longer and Strong password'
+                                                value: {minLength: 11, maxLength: 15},
+                                                message: 'Provide the correct number '
                                             }
                                         })} />
                                     <label>
-                                        {errors.confirmPassword?.type === 'required' && <span className="label-text-alt text-red-700">{errors.confirmPassword.message}</span>}
                                         {errors.confirmPassword?.type === 'pattern' && <span className="label-text-alt text-red-700">{errors.confirmPassword.message}</span>}
                                     </label>
                                 </div>
