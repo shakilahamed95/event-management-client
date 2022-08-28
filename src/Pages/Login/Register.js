@@ -15,6 +15,9 @@ const Register = () => {
     const from = location.state?.from?.pathname || "/";
 
     const onSubmit = async (data) => {
+        if(data.password !== data.confirmPassword){
+            return
+        }
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
         navigate(from, { replace: true })
@@ -38,16 +41,14 @@ const Register = () => {
             <div class="hero">
                 <div class="hero-content flex-col lg:flex-row-reverse">
                     <div class="text-center lg:text-left">
-                        <img src={registerImg} alt='Register' class="max-w-sm rounded-lg " />
+                        <img src={registerImg} alt='Register' class="max-w-sm " />
                     </div>
                     <div class="card flex-shrink-0 w-full max-w-sm bg-base-100">
                         <div class="card-body">
                             <h2 className="text-center text-3xl font-bold text-blue-700">Please Register</h2>
                             <form onSubmit={handleSubmit(onSubmit)}>
+                                {/* ------Name------ */}
                                 <div className="form-control w-full max-w-xs my-3">
-                                    {/* <label className="input-group">
-                                        <span>Name</span>
-                                        </label> */}
                                     <input type="text" placeholder="Your Name" className="input input-bordered w-full max-w-xs"
                                         {...register("name", {
                                             required: {
@@ -59,10 +60,8 @@ const Register = () => {
                                         {errors.name?.type === 'required' && <span className="label-text-alt text-red-700">{errors.name.message}</span>}
                                     </label>
                                 </div>
+                                {/* ------Email------ */}
                                 <div className="form-control w-full max-w-xs my-3">
-                                    {/* <label className="input-group">
-                                        <span>Email</span>
-                                    </label> */}
                                     <input type="email" placeholder="Email Address" className="input input-bordered w-full max-w-xs"
                                         {...register("email", {
                                             required: {
@@ -79,10 +78,8 @@ const Register = () => {
                                         {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-700">{errors.email.message}</span>}
                                     </label>
                                 </div>
+                                {/* ------Password------ */}
                                 <div className="form-control w-full max-w-xs my-3">
-                                    {/* <label className="input-group">
-                                        <span>Password</span>
-                                    </label> */}
                                     <input type="password" placeholder="Password" className="input input-bordered w-full max-w-xs"
                                         {...register("password", {
                                             required: {
@@ -99,10 +96,8 @@ const Register = () => {
                                         {errors.password?.type === 'pattern' && <span className="label-text-alt text-red-700">{errors.password.message}</span>}
                                     </label>
                                 </div>
+                                {/* ------Confirm Password------ */}
                                 <div className="form-control w-full max-w-xs my-3">
-                                    {/* <label className="input-group">
-                                        <span>Password</span>
-                                    </label> */}
                                     <input type="password" placeholder="Confirm Password" className="input input-bordered w-full max-w-xs"
                                         {...register("confirmPassword", {
                                             required: {
